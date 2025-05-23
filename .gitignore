@@ -1,1 +1,3 @@
-.env
+python_env/
+
+accesstoken.txt

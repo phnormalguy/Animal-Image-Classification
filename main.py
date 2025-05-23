@@ -72,7 +72,7 @@ class PredictionResponse(BaseModel):
 async def read_root():
     """
     Root endpoint to confirm the API is running.
-    """
+    """ 
     return {"message": "Welcome to the ML Model API! Use /predict_image for predictions."}
 
 @app.post("/predict_image", response_model=PredictionResponse)
@@ -105,5 +105,5 @@ async def predict_image(file: UploadFile = File(...)):
         return PredictionResponse(**response_data)
     except Exception as e:
         # Catch any exceptions during prediction and return an HTTP 500 error
-        raise HTTPException(status_code=500, detail=f"Image prediction failed: {e}")
+        raise HTTPException(status_code=500, detail=f"Image prediction failed: {e}") 
 
